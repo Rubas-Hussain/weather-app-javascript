@@ -12,7 +12,7 @@ const backgroundImageHandler = (condition) => {
             appBody.style.backgroundImage = "url('https://media4.giphy.com/media/5HK4TiiBeLSZq/giphy.webp?cid=ecf05e47kspt0p50c9t7ofgv1nn5wk6fjr8qhwtou30lu8ld&ep=v1_gifs_search&rid=giphy.webp&ct=g')";
             break;
         case 'Rain':
-            appBody.style.backgroundImage = "url('https://media3.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.webp?cid=ecf05e47kspt0p50c9t7ofgv1nn5wk6fjr8qhwtou30lu8ld&ep=v1_gifs_search&rid=giphy.webp&ct=g')";
+            appBody.style.backgroundImage = "url('https://media4.giphy.com/media/ZyFCksxxD9tmLYfGJo/giphy.gif?cid=6c09b952r1q4t0tf12eakqnem259gzfikvai4zbi4j30jncu&ep=v1_gifs_search&rid=giphy.gif&ct=g')";
             break;
         case 'Clear':
             appBody.style.backgroundImage = "url('https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTFsZmc2OGxmdmd4eGc4eng2anJtc3V5MTUwMDBvb2tneWRrbzNndiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/0Styincf6K2tvfjb5Q/giphy.webp')";
@@ -36,7 +36,7 @@ const backgroundImageHandler = (condition) => {
 // Fetching weather data
 const getWeatherData = async () => {
     try {
-        const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${currentCity}&appid=${apiKey}&units=metric`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&appid=${apiKey}&units=metric`);
         
         if (response.status >= 200 && response.status < 300) {
             const data = await response.json();
